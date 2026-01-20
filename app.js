@@ -91,7 +91,7 @@ const selectFilter = (e)=>{
             renderAllTodos();  
             break;
     }
-    // Tarihe Göre sıralama yapılması gerek
+
 }   
 
 filterSelect.addEventListener("change",selectFilter);
