@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="header">
+            <h1>Todo Web Application</h1>
+        </div>
+
+
+        <div class="content">
+            
+            <div class="form">
+                <form>
+                    <label for="todoInput">Günlük Hedefinizi Giriniz</label>
+                    <input type="text" name="todoInput" class="todoInput">
+                    <button type="button" class="addBtn">Ekle</button>
+                    <div class="custom-select">
+                        <select id="filterSelect" class="filterSelect">
+                            <option value="all">Bütün Todoları Getir</option>   
+                            <option value="completed">Tamamlanan</option>
+                            <option value="uncompleted">Tamamlanmamış</option>
+                            <option value="dateAsc">Tarihe Göre Sırala ↑</option>
+                            <option value="dateDesc">Tarihe Göre Sırala ↓</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+            <div class="todoContent">
+                <ul class="todoList">
+                </ul>
+            </div>
+
+
+        </div>
+
+
+        <div id="footer">
+      
+        </div>
+
+
+    </div>
+
+
+<script src="app.js"></script>
+</body>
+</html>

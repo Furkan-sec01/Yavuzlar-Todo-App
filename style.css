@@ -1,0 +1,211 @@
+/* SIFIRLAMA VE GENEL AYARLAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f2f5; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* ANA KUTU */
+.container {
+    width: 90%;
+    max-width: 1000px; /* Yan yana sığsınlar diye biraz genişlettim */
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* BAŞLIK */
+.header {
+    background-color: #038a36;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* İÇERİK ALANI */
+.content {
+    padding: 25px;
+}
+
+/* --- FORM ALANI (DÜZELTİLEN KISIM) --- */
+.form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+    margin-bottom: 25px;
+}
+
+.form form {
+    display: flex; /* Yan yana dizilmeleri için şart */
+    align-items: center; /* İŞTE BU KOD: Yazıyı ve inputu dikeyde ortalar */
+    gap: 15px; /* Elemanlar birbirine yapışmasın */
+    flex-wrap: wrap; /* Ekran küçülürse aşağı kayabilsinler */
+}
+
+.form label {
+    margin: 0; /* Etrafındaki gereksiz boşlukları sildik */
+    font-weight: bold;
+    color: #495057;
+    white-space: nowrap; /* Yazı sıkışıp alt satıra geçmesin */
+}
+
+/* INPUT KUTUSU */
+.todoInput {
+    flex: 1; /* Kalan boşluğu doldursun */
+    min-width: 200px;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    height: 45px; /* Yükseklik sabitledik ki hepsi aynı boy dursun */
+}
+
+.todoInput:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+}
+
+/* BUTONLAR */
+button {
+    cursor: pointer;
+    border: none;
+    padding: 0 20px;
+    height: 45px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    
+    /* İŞTE SİHİRLİ KOD BURASI */
+    transition: background-color 0.5s ease, transform 0.2s; 
+    /* background-color 0.5s: Renk değişimi yarım saniyede yavaşça olsun */
+    /* transform 0.2s: Tıklama efekti hızlı olsun */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.addBtn {
+    background-color: #28a745; 
+    color: white;
+}
+
+/* GÜNCELLEME MODU BUTONU (Düzenle deyince bu renk olacak - Turuncu) */
+.frmEditBtn {
+    background-color: #f37702; 
+    color: white;
+}
+/* FİLTRE SELECT KUTUSU */
+.custom-select {
+    width: auto;
+}
+
+.filterSelect {
+    padding: 0 15px;
+    height: 45px; /* Input ve butonla aynı boy */
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* --- LİSTE ALANI --- */
+.todoList {
+    list-style: none;
+}
+
+.todoItem {
+    background-color: white;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.todoText {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+    padding: 0 10px;
+    word-break: break-word;
+}
+
+.eklendi {
+    text-decoration: line-through;
+    color: #adb5bd;
+}
+
+/* LİSTE BUTONLARI */
+.completedBtn {
+    background-color: #17a2b8;
+    color: white;
+    height: 35px; /* Liste butonları biraz daha kibar olsun */
+    font-size: 13px;
+}
+
+.editBtn {
+
+    background-color: rgb(243, 150, 10);
+    color: white;
+    height: 35px;
+    font-size: 13px;
+}
+
+.deleteBtn {
+    background-color: #dc3545;
+    color: white;
+    height: 35px;
+    font-size: 13px;
+}
+
+/* FOOTER */
+#footer {
+    height: 20px;
+}
+
+/* MOBİL UYUM */
+@media (max-width: 768px) {
+    .form form {
+        flex-direction: column; /* Mobilde mecburen alt alta geçsin */
+        align-items: stretch; /* Mobilde tam genişlik olsun */
+    }
+    
+    .form label {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .todoItem {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .todoItem button {
+        width: 100%;
+    }
+}
