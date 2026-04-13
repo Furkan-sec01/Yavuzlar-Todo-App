@@ -3,7 +3,7 @@
 HTML, CSS ve JavaScript kullanılarak geliştirilmiş, verileri tarayıcı hafızasında (LocalStorage) saklayan bir görev takip uygulaması.
 
 ![Uygulama Ekran Görüntüsü](screenshot.png)
-*(Buraya projenin ekran görüntüsünü eklersen çok havalı durur)*
+
 
 ## Özellikler
 
@@ -16,8 +16,8 @@ HTML, CSS ve JavaScript kullanılarak geliştirilmiş, verileri tarayıcı hafı
 ## Kullanılan Teknolojiler
 
 * **HTML5**
-* **CSS3** (Flexbox, CSS Transitions)
-* **JavaScript** (ES6+, DOM Manipulation, LocalStorage)
+* **CSS3** 
+* **JavaScript** 
 
 ## Kurulum
 
